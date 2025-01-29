@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتایج انتخابات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>نتایج انتخابات</h1>
+        <table>
+            <tr>
+                <th>نام کاندید</th>
+                <th>تعداد آراء</th>
+            </tr>
+            {% for candidate, votes in results.items() %}
+            <tr>
+                <td>{{ candidate }}</td>
+                <td>{{ votes }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('index') }}" class="btn">بازگشت به صفحه اصلی</a>
+    </div>
+</body>
+</html>

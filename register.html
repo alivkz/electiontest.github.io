@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام رأی‌دهنده</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ثبت‌نام رأی‌دهنده</h1>
+        <form action="{{ url_for('register') }}" method="POST">
+            <input type="text" name="name" placeholder="نام" required>
+            <input type="text" name="national_id" placeholder="شناسه ملی" required>
+            <button type="submit">ثبت نام</button>
+        </form>
+    </div>
+</body>
+</html>
