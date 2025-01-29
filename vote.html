@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رأی دادن</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>رأی دادن</h1>
+        <form action="{{ url_for('vote') }}" method="POST">
+            <select name="candidate" required>
+                <option value="الف">نامزد الف</option>
+                <option value="ب">نامزد ب</option>
+                <option value="پ">نامزد پ</option>
+                <option value="ت">نامزد ت</option>
+            </select>
+            <button type="submit">ثبت رأی</button>
+        </form>
+    </div>
+</body>
+</html>
